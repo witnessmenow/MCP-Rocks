@@ -15,7 +15,7 @@ function deleteStaleGame($timelimitSeconds)
 	
 	$url = $baseUrl . "/" . $listName . ".json";
 	
-	$json = getListOfGamesJson($url);
+	$json = getListOfGames($url);
 	
 	$currentTime = urlencode (time());
 	$cutOffTime = $currentTime - $timelimitSeconds;

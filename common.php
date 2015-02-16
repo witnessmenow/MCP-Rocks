@@ -32,8 +32,8 @@ function getFirebaseURL($externalIP, $includeJsonEnding = true)
 function getListOfGamesJson($url)
 {
 	$result = file_get_contents($url);
-	$json = json_encode($result);
-	return $json;
+	//$json = json_encode($result);
+	return $result;
 }
 
 //Gets list of games and decodes as Json

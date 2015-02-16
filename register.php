@@ -33,7 +33,7 @@ else
 //So if we find a dup lets remove it
 function checkForDuplicateServer($url, $externalIP, $internal)
 {
-	$json = getListOfGamesJson($url);
+	$json = getListOfGames($url);
 	if(count($json) != 0)
 	{
 		foreach ($json as $key => $value) 
