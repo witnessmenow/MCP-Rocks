@@ -6,7 +6,7 @@ $timestamp = urlencode (time());
 $external = $_SERVER['REMOTE_ADDR'];
 
 $url = getFirebaseURL($external);
-$json = getListOfGamesJson($url);
+$json = getListOfGames($url);
 
 echo "Found the following games on the same IP as you";
 echo "<br>";

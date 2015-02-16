@@ -3,8 +3,8 @@
 require_once('common.php');
 
 //30 minutes
-//$timelimitSeconds = 60*30;
-$timelimitSeconds = 60;
+$timelimitSeconds = 60*30;
+
 
 deleteStaleGame($timelimitSeconds);
 

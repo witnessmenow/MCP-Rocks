@@ -28,8 +28,16 @@ function getFirebaseURL($externalIP, $includeJsonEnding = true)
 	return $url;
 }
 
-//Gets list of games and decodes as Json
+//Gets list of games and encodes as Json
 function getListOfGamesJson($url)
+{
+	$result = file_get_contents($url);
+	$json = json_encode($result);
+	return $json;
+}
+
+//Gets list of games and decodes as Json
+function getListOfGames($url)
 {
 	$result = file_get_contents($url);
 	$json = json_decode($result);
