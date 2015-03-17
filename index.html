@@ -79,7 +79,7 @@
 				{
 					address = decodeURIComponent(jsonObj[k].internalIp);
 					var tempGameName = jsonObj[k].game;
-					tempGameName = tempGameName.replace("+", "%20");
+					tempGameName = tempGameName.replace(/\+/g, "%20");
 					name = decodeURIComponent(tempGameName);
 					
 					aTag = document.createElement('a');
