@@ -78,7 +78,9 @@
 				if(jsonObj.hasOwnProperty(k))
 				{
 					address = decodeURIComponent(jsonObj[k].internalIp);
-					name = jsonObj[k].game;
+					var tempGameName = jsonObj[k].game;
+					tempGameName = tempGameName.replace("+", "%20");
+					name = decodeURIComponent(tempGameName);
 					
 					aTag = document.createElement('a');
 					aTag.setAttribute('href',"http://" + address);
